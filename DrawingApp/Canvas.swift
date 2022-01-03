@@ -4,13 +4,11 @@ import UIKit
 class Canvas: UIView {
     var color: CGColor = UIColor.black.cgColor
     var brushWidth: CGFloat = 10.0
-    var opacity: CGFloat = 1.0
     var lines: [[CGPoint]] = [];
     
     func setStyles(_ context: CGContext) {
         context.setLineWidth(brushWidth)
-        context.setFillColor(color)
-        context.setAlpha(opacity)
+        context.setStrokeColor(color)
     }
     
     override func draw(_ rect: CGRect) {
@@ -50,5 +48,25 @@ class Canvas: UIView {
         lines.append(lastLine)
         
         setNeedsDisplay()
+    }
+    
+    func removePrevLine() {
+        if (lines.count > 1) {
+            lines.removeLast()
+
+            setNeedsDisplay()
+        }
+    }
+    
+    func clearAll() {
+        if (lines.count > 1) {
+            lines.removeAll()
+            
+            setNeedsDisplay()
+        }
+    }
+    
+    func setColor(_ newColor:CGColor) {
+        color = newColor
     }
 }
