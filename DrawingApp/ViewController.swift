@@ -33,12 +33,6 @@ class ViewController: UIViewController, UIColorPickerViewControllerDelegate {
 
         canvas.setColor(color.cgColor)
     }
-
-    func showModal() {
-        let modalViewController = ModalViewController()
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        present(modalViewController, animated: true, completion: nil)
-    }
     
     @IBAction func remove(_ sender: Any) {
         canvas.clearAll()

@@ -15,6 +15,7 @@
 		6E2F9D252782E19700AF2284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F9D232782E19700AF2284 /* LaunchScreen.storyboard */; };
 		6E4B5C41278370B00058BB0E /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B5C40278370B00058BB0E /* Canvas.swift */; };
 		6E4B5C4327837FCB0058BB0E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B5C4227837FCB0058BB0E /* ModalViewController.swift */; };
+		6ED81D422784CC980060F372 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED81D412784CC980060F372 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6E2F9D262782E19700AF2284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4B5C40278370B00058BB0E /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		6E4B5C4227837FCB0058BB0E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		6ED81D412784CC980060F372 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				6E2F9D212782E19700AF2284 /* Assets.xcassets */,
 				6E2F9D232782E19700AF2284 /* LaunchScreen.storyboard */,
 				6E2F9D262782E19700AF2284 /* Info.plist */,
+				6ED81D412784CC980060F372 /* logo.png */,
 			);
 			path = DrawingApp;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED81D422784CC980060F372 /* logo.png in Resources */,
 				6E2F9D252782E19700AF2284 /* LaunchScreen.storyboard in Resources */,
 				6E2F9D222782E19700AF2284 /* Assets.xcassets in Resources */,
 				6E2F9D202782E19600AF2284 /* Main.storyboard in Resources */,
