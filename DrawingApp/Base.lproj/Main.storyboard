@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,38 +13,44 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nd6-7T-0Ae">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="en9-OL-Utj">
+                                <rect key="frame" x="8" y="791" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="remove" style="plain" id="jtq-3I-yNy">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WeG-G2-CWv">
-                                            <rect key="frame" x="16" y="5" width="113" height="34.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="delete.left.fill" catalog="system" title="Remove">
-                                                <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
-                                            </buttonConfiguration>
-                                            <connections>
-                                                <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Win-NJ-VbL"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem title="Undo" id="hzC-Zd-Bqo">
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <connections>
+                                            <action selector="undo:" destination="BYZ-38-t0r" id="7c5-Kt-Ulf"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="undo" style="plain" id="W4p-Hg-Zgn">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="K1O-Ms-Hbi">
-                                            <rect key="frame" x="211.5" y="0.0" width="92.5" height="44"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HTr-qW-XCN"/>
+                                    <barButtonItem style="plain" id="Alh-Mj-2Jx">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="15" id="9NR-uq-Fbn">
+                                            <rect key="frame" x="90.333333333333314" y="5" width="118" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward.fill" catalog="system" title="Undo">
-                                                <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
-                                            </buttonConfiguration>
+                                            <color key="tintColor" systemColor="systemIndigoColor"/>
                                             <connections>
-                                                <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ni-LL-EdG"/>
+                                                <action selector="onSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vhu-J6-ida"/>
                                             </connections>
-                                        </button>
+                                        </slider>
+                                        <color key="tintColor" red="1" green="0.47611131579999999" blue="0.53313848080000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ONk-Vz-5l9"/>
+                                    <barButtonItem title="Item" image="scribble.variable" catalog="system" id="44e-qi-qsC">
+                                        <color key="tintColor" red="1" green="0.47611131581833654" blue="0.53313848084661508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="onColorButtonPress:" destination="BYZ-38-t0r" id="l8f-u4-ump"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vle-Db-Ytb"/>
+                                    <barButtonItem title="Remove" id="FD7-2a-Pu9">
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <connections>
+                                            <action selector="remove:" destination="BYZ-38-t0r" id="2zX-KB-Lq8"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -55,12 +61,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="22.183098591549296"/>
+            <point key="canvasLocation" x="17.39130434782609" y="22.098214285714285"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
-        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
-        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
+        <image name="scribble.variable" catalog="system" width="128" height="118"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

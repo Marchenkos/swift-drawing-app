@@ -3,36 +3,33 @@ import UIKit
 
 class Canvas: UIView {
     var color: CGColor = UIColor.black.cgColor
-    var brushWidth: CGFloat = 10.0
-    var lines: [[CGPoint]] = [];
-    
-    func setStyles(_ context: CGContext) {
-        context.setLineWidth(brushWidth)
-        context.setStrokeColor(color)
-    }
+    var strokeWidth: CGFloat = 5.0
+    var lines: [Line] = [];
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {
             return
         }
-        
-        setStyles(context)
-                
+                        
         lines.forEach { (line) in
-            for (i, p) in line.enumerated() {
+            context.setLineWidth(line.strokeWidth)
+            context.setStrokeColor(line.color)
+
+            for (i, p) in line.point.enumerated() {
                 if (i == 0) {
                     context.move(to: p)
                 } else {
                     context.addLine(to: p)
                 }
             }
+            
+            context.strokePath()
         }
-        
-        context.strokePath()
     }
 
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lines.append(Line.init(point: [CGPoint](), color: self.color, strokeWidth: self.strokeWidth))
+
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,14 +41,14 @@ class Canvas: UIView {
             return
         }
         
-        lastLine.append(touch)
+        lastLine.point.append(touch)
         lines.append(lastLine)
         
         setNeedsDisplay()
     }
-    
-    func removePrevLine() {
-        if (lines.count > 1) {
+
+    func undo() {
+        if (lines.count > 0) {
             lines.removeLast()
 
             setNeedsDisplay()
@@ -59,7 +56,7 @@ class Canvas: UIView {
     }
     
     func clearAll() {
-        if (lines.count > 1) {
+        if (lines.count > 0) {
             lines.removeAll()
             
             setNeedsDisplay()
@@ -68,5 +65,9 @@ class Canvas: UIView {
     
     func setColor(_ newColor:CGColor) {
         color = newColor
+    }
+    
+    func setStrokeWidth(_ newStrokeWidth:CGFloat) {
+        strokeWidth = newStrokeWidth
     }
 }
