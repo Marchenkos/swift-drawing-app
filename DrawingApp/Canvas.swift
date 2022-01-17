@@ -1,11 +1,19 @@
 import Foundation
 import UIKit
 
-class Canvas: UIView {
+class CanvasView: UIView {
     var color: CGColor = UIColor.black.cgColor
     var strokeWidth: CGFloat = 5.0
     var lines: [Line] = []
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {
             return

@@ -1,19 +1,13 @@
 import UIKit
 
 class ViewController: UIViewController, UIColorPickerViewControllerDelegate {
-    let canvas = Canvas()
+    @IBOutlet var canvas: CanvasView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addCanvas()
-    }
-    
-    func addCanvas() {
+        
         canvas.frame = CGRect(x: 0, y: 20, width: view.frame.width, height: view.frame.height - 100)
         canvas.backgroundColor = .white
-
-        view.addSubview(canvas)
     }
     
     func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
