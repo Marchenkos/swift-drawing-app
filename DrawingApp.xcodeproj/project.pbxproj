@@ -15,7 +15,6 @@
 		6E2F9D222782E19700AF2284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F9D212782E19700AF2284 /* Assets.xcassets */; };
 		6E2F9D252782E19700AF2284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F9D232782E19700AF2284 /* LaunchScreen.storyboard */; };
 		6E4B5C41278370B00058BB0E /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B5C40278370B00058BB0E /* Canvas.swift */; };
-		6E4B5C4327837FCB0058BB0E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4B5C4227837FCB0058BB0E /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		6E2F9D242782E19700AF2284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E2F9D262782E19700AF2284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4B5C40278370B00058BB0E /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		6E4B5C4227837FCB0058BB0E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				6E2F9D182782E19600AF2284 /* AppDelegate.swift */,
 				6E2F9D1A2782E19600AF2284 /* SceneDelegate.swift */,
 				6E2F9D1C2782E19600AF2284 /* ViewController.swift */,
-				6E4B5C4227837FCB0058BB0E /* ModalViewController.swift */,
 				6E2F9D1E2782E19600AF2284 /* Main.storyboard */,
 				6E4B5C40278370B00058BB0E /* Canvas.swift */,
 				6E2317D42792B9B800FFA447 /* Line.swift */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2F9D1D2782E19600AF2284 /* ViewController.swift in Sources */,
-				6E4B5C4327837FCB0058BB0E /* ModalViewController.swift in Sources */,
 				6E2F9D192782E19600AF2284 /* AppDelegate.swift in Sources */,
 				6E2317D52792B9B800FFA447 /* Line.swift in Sources */,
 				6E2F9D1B2782E19600AF2284 /* SceneDelegate.swift in Sources */,
@@ -309,6 +305,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +334,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

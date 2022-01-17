@@ -39,6 +39,6 @@ class ViewController: UIViewController, UIColorPickerViewControllerDelegate {
     }
 
     @IBAction func onSliderValueChange(_ sender: UISlider) {
-        canvas.setStrokeWidth(CGFloat(sender.value));
+        canvas.setStrokeWidth(CGFloat(sender.value))
     }
 }
